@@ -1,13 +1,30 @@
-<div class="row">
-      <div><%= link_to "Home", root_path %> </div>
-      <div><%= link_to "About", about_path %></div>
-      <div><%= link_to "Contact", contact_path %></div>
-      <div><%= link_to "Faq", faq_path %></div>
-      <div><%= link_to "Blog", blogs_path %></div>
-      <% if current_user %>
-        <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-      <% else %>
-        <%= link_to "Register", new_user_registration_path %>
-        <%= link_to "Login", new_user_session_path %>
-      <% end %>
-</div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
+  <a class="navbar-brand" href="#">Casey Lund</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        
+  <span class="navbar-toggler-icon"></span>
+  </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="http://localhost:3000/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="http://localhost:3000/contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/faq">FAQ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://localhost:3000/blogs">Blog</a>
+        </li>
+      </ul>
+        <form class="form-inline mt-2 mt-md-0">
+          <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+    </div>
+</nav>
